@@ -1,0 +1,55 @@
+:root {
+    --ff-primary: 'Inter', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-extra-bold: 800;
+
+    --fs-01: 0.875rem; // 14px
+    --fs-02: 1rem;     // 16px
+    --fs-03: 1.25rem;  // 20px
+    --fs-04: 1.75rem;  // 28px
+    --fs-05: 3.625rem; // 58px
+
+    --fs-sm: var(--fs-01); // 14px
+    --fs-rg: var(--fs-02); // 16px
+    --fs-md: var(--fs-03); // 20px
+    --fs-lg: var(--fs-04); // 28px
+    --fs-xl: var(--fs-05); // 58px
+
+    --fs-btn: var(var(--fs-02)); // 16px
+}
+
+body {
+    --p-body-bg-clr: hsl(var(--clr-neutral-10));
+
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--p-body-bg-clr);
+
+    &.theme-dark {
+        --p-body-bg-clr: hsl(var(--clr-primary-180));
+    }
+}
+
+
+.h1 {
+    font-size: var(--fs-xl);
+    line-height: 1;
+    font-weight: var(--fw-extra-bold);
+}
+
+.h2 {
+    font-size: var(--fs-lg);
+    line-height: 1.35;
+    font-weight: var(--fw-extra-bold);
+}
+
+.h3 {
+    font-size: var(--fs-03);
+    line-height: 1;
+    font-weight: var(--fw-semi-bold);
+}
+

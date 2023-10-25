@@ -1,0 +1,45 @@
+:root {
+
+    // Primary
+    --clr-primary-hue: 252;
+
+    --clr-primary-30:  
+        calc(var(--clr-primary-hue) + 4) 100% 79%;      /* #B295FF */ 
+    
+    --clr-primary-50:  
+        var(--clr-primary-hue) 100% 63%;                /* #6943FF */
+    
+    --clr-primary-100: 
+        var(--clr-primary-hue) 34% 50%;                 /* #6554AB */
+    
+    --clr-primary-140: 
+        calc(var(--clr-primary-hue) - 1) 19% 40%;       /* #5A537B */
+    
+    --clr-primary-160: 
+        var(--clr-primary-hue) 31% 28%;                 /* #3A315E */
+    
+    --clr-primary-180: 
+        calc(var(--clr-primary-hue) + 2) 30% 17%;       /* #241E38 */
+
+    // Nuetrals
+    --clr-neutral-hue: 0;
+
+    --clr-neutral-10:  var(--clr-neutral-hue) 0% 100%; /* #FFFFFF */
+    --clr-neutral-100: var(--clr-neutral-hue) 0% 24%;  /* #3D3D3D */
+    --clr-neutral-110: var(--clr-neutral-hue) 0% 21%;  /* #353535 */
+
+    // Info
+    --clr-success-100: 144, 71%, 69%;
+
+    // Background
+    --clr-bg-primary: var(--clr-primary-50);
+
+    // Text
+    --clr-txt-white: var(--clr-neutral-10);
+
+
+    & .theme-dark {
+        --clr-bg-primary: var(--clr-primary-160);
+    }
+
+}

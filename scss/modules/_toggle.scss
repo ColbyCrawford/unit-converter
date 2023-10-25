@@ -1,0 +1,30 @@
+.toggle {
+    --p-toggle-clr: var(--clr-neutral-10);
+
+    inline-size: 3rem;
+    block-size: 1.75rem;
+    border-radius: var(--border-radius-round);
+    background-color: hsl(var(--p-toggle-clr) / 40%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.125rem;
+    cursor: pointer;
+}
+
+.toggle:checked {
+    --p-toggle-clr: var(--clr-success-100);
+    background-color: hsl(var(--p-toggle-clr));
+    justify-content: flex-end;
+}
+
+.toggle::before {
+    --p-switch-clr: var(--clr-neutral-10);
+
+    content: '';
+    position: absolute;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    background-color: hsl(var(--p-switch-clr));
+    border-radius: var(--border-radius-round);
+}
