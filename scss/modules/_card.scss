@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.card {
+    --p-card-clr: var(--clr-primary-20);
+
+    padding-block: 2rem;
+    border-radius: var(--border-radius-sm);
+    background-color: hsl(var(--p-card-clr));
+
+    #{$theme-dark} & {
+        --p-card-clr: var(--clr-primary-160);
+    }
+}
+
+.card:not(:last-of-type) {
+    margin-block-end: 1.5rem;
+}

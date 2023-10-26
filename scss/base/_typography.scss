@@ -22,15 +22,19 @@
 }
 
 body {
-    --p-body-bg-clr: hsl(var(--clr-neutral-10));
+    --p-body-bg-clr: var(--clr-neutral-10);
+    --p-body-txt-clr: var(--clr-neutral-100);
 
     font-family: var(--ff-primary);
     font-size: 1rem;
     line-height: 1.5;
-    background-color: var(--p-body-bg-clr);
+    background-color: hsl(var(--p-body-bg-clr));
+    color: hsl(var(--p-body-txt-clr));
+    text-align: center;
 
     &.theme-dark {
-        --p-body-bg-clr: hsl(var(--clr-primary-180));
+        --p-body-bg-clr: var(--clr-primary-180);
+        --p-body-txt-clr: var(--clr-neutral-10);
     }
 }
 

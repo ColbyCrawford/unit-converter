@@ -433,6 +433,8 @@ input::placeholder {
 
 :root {
   --clr-primary-hue: 252;
+  --clr-primary-20:
+      var(--clr-primary-hue) 24% 87%; /* #D9D6E6 */
   --clr-primary-30:
       calc(var(--clr-primary-hue) + 4) 100% 79%; /* #B295FF */
   --clr-primary-50:
@@ -498,15 +500,19 @@ input::placeholder {
 }
 
 body {
-  --p-body-bg-clr: hsl(var(--clr-neutral-10));
+  --p-body-bg-clr: var(--clr-neutral-10);
+  --p-body-txt-clr: var(--clr-neutral-100);
   font-family: var(--ff-primary);
   font-size: 1rem;
   line-height: 1.5;
-  background-color: var(--p-body-bg-clr);
+  background-color: hsl(var(--p-body-bg-clr));
+  color: hsl(var(--p-body-txt-clr));
+  text-align: center;
 }
 
 body.theme-dark {
-  --p-body-bg-clr: hsl(var(--clr-primary-180));
+  --p-body-bg-clr: var(--clr-primary-180);
+  --p-body-txt-clr: var(--clr-neutral-10);
 }
 
 .h1 {
@@ -527,11 +533,19 @@ body.theme-dark {
   font-weight: var(--fw-semi-bold);
 }
 
+.container {
+  --p-container-max-width: 65rem;
+  --p-container-padding: 1.5rem;
+  max-inline-size: var(--p-container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--p-container-padding);
+}
+
 .btn-primary {
   display: inline-flex;
   font-family: var(--ff-primary);
   font-weight: var(--fw-medium);
-  padding: 0.5rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   cursor: pointer;
   border-radius: var(--border-radius-sm);
 }
@@ -572,6 +586,68 @@ body.theme-dark {
   border-radius: var(--border-radius-round);
 }
 
+#int-input {
+  --p-input-border: var(--clr-primary-30);
+  border-radius: var(--border-radius-sm);
+  border: 0.125rem solid hsl(var(--p-input-border));
+  inline-size: 100%;
+  max-inline-size: 7.5rem;
+  padding-block: 0.5rem;
+  display: flex;
+  margin-inline: auto;
+}
+
+.card {
+  --p-card-clr: var(--clr-primary-20);
+  padding-block: 2rem;
+  border-radius: var(--border-radius-sm);
+  background-color: hsl(var(--p-card-clr));
+}
+
+.theme-dark .card {
+  --p-card-clr: var(--clr-primary-160);
+}
+
+.card:not(:last-of-type) {
+  margin-block-end: 1.5rem;
+}
+
 .u-bg-primary {
   background-color: hsl(var(--clr-bg-primary));
+}
+
+.u-txt-white {
+  color: hsl(var(--clr-txt-white));
+}
+
+.m-b8 {
+  margin-block-end: 0.5rem !important;
+}
+
+.m-b24 {
+  margin-block-end: 1.5rem !important;
+}
+
+.m-b28 {
+  margin-block-end: 1.75rem !important;
+}
+
+.mi-auto {
+  margin-inline: auto !important;
+}
+
+.pb-16 {
+  padding-block: 1rem !important;
+}
+
+.pb-40 {
+  padding-block: 2.5rem !important;
+}
+
+.p-b32 {
+  padding-block-end: 2rem !important;
+}
+
+.pi-24 {
+  padding-inline: 1.5rem !important;
 }/*# sourceMappingURL=style.css.map */

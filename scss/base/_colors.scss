@@ -1,8 +1,12 @@
-:root {
+@use '../abstracts' as *;
 
+:root {
     // Primary
     --clr-primary-hue: 252;
 
+    --clr-primary-20: 
+        var(--clr-primary-hue) 24% 87%;                 /* #D9D6E6 */ 
+    
     --clr-primary-30:  
         calc(var(--clr-primary-hue) + 4) 100% 79%;      /* #B295FF */ 
     
@@ -38,7 +42,7 @@
     --clr-txt-white: var(--clr-neutral-10);
 
 
-    & .theme-dark {
+    & #{$theme-dark} {
         --clr-bg-primary: var(--clr-primary-160);
     }
 

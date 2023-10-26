@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="u-bg-primary">
-        <input id="theme-toggle" class="toggle" type="checkbox" autocomplete="off">
+    <header class="u-bg-primary pb-16">
+        <div class="container"><input id="theme-toggle" class="toggle mi-auto" type="checkbox" autocomplete="off"></div>
     </header>
-    <div class="u-bg-primary">
-        <h1 class="h2">Metric/Imperial Unit Conversion</h1>
-        <input type="text" class="h1" placeholder="20">
-        <button class="btn-primary">Convert</button>
+    <div class="u-bg-primary u-txt-white p-b32">
+        <div class="container">
+            <h1 class="h2 m-b28">Metric/Imperial Unit Conversion</h1>
+            <input id="int-input" type="text" class="h1 m-b24" autocomplete="off" placeholder="0">
+            <button id="convert-btn" class="btn-primary">Convert</button>
+        </div>
     </div>
-    <div>
-        <h3 class="h3">Length (Meter/Feet)</h3>
-        <p>20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
-        <h3 class="h3">Volume (Liters/Gallons)</h3>
-        <p>20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
-        <h3 class="h3">Mass (Kilograms/Pounds)</h3>
-        <p>20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+    <div class="pb-40">
+        <div class="container">
+            <div class="card">
+                <h3 class="h3 m-b8">Length (Meter/Feet)</h3>
+                <p id="meter-feet"></p>
+            </div>
+            <div class="card">
+                <h3 class="h3 m-b8">Volume (Liters/Gallons)</h3>
+                <p id="liters-gallons"></p>
+            </div>
+            <div class="card">
+                <h3 class="h3 m-b8">Mass (Kilograms/Pounds)</h3>
+                <p id="kilos-pounds"></p>
+            </div>
+        </div>
     </div>
     <script src="js/index.js"></script>
     <script src="js/theme.js"></script>

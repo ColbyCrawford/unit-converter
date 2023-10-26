@@ -28,3 +28,16 @@
     background-color: hsl(var(--p-switch-clr));
     border-radius: var(--border-radius-round);
 }
+
+
+#int-input {
+    --p-input-border: var(--clr-primary-30);
+
+    border-radius: var(--border-radius-sm);
+    border: 0.125rem solid hsl(var(--p-input-border));
+    inline-size: 100%;
+    max-inline-size: 7.5rem;
+    padding-block: 0.5rem;
+    display: flex;
+    margin-inline: auto;
+}
